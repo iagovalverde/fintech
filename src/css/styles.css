@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@layer base {
+    body {
+        font-family: "Poppins", sans-serif;
+    }
+
+    h3 {
+        font-family: "Prata", serif;
+    }
+}
+
+@layer components {
+    .layout {
+        @apply w-screen h-screen bg-gradient-to-b from-primary-100 to-primary-300 via-primary-200 sm:flex sm:items-center sm:justify-evenly
+    }
+
+    .logo {
+        @apply mx-auto mt-16 min-w-80 sm:h-32 lg:h-48
+    }
+
+    .title {
+        @apply ml-4 mt-16 mb-4 text-4xl text-white font-bold
+    }
+    
+    .subtitle {
+        @apply mt-2 text-center text-2xl text-white sm:text-3xl lg:text-5xl
+    }
+    
+    .input-field {
+        @apply w-full ml-2 mt-4 px-2 rounded-sm text-2xl bg-transparent border-b-2 text-white border-gray-400 outline-none lg:w-96
+    }
+    
+    .btn {
+        @apply w-full h-12 text-2xl text-center bg-secondary-100 hover:bg-secondary-200 text-white font-bold rounded-xl shadow-md
+    }
+
+    .default-link {
+        @apply my-8 text-center block text-gray-400 hover:text-gray-200
+    }
+
+    .underl {
+        @apply underline
+    }
+
+    .icon {
+        @apply text-white text-2xl
+    }
+
+}
+
+.btn.highlight {
+    @apply flex justify-center items-center gap-4 bg-gray-200 text-primary-200 hover:bg-gray-400
+}
+
+.default-link.highlight {
+    @apply text-right my-2
+}
+
